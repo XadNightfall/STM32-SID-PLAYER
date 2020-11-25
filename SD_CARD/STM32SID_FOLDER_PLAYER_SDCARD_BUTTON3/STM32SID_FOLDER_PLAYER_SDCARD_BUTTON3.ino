@@ -24,12 +24,46 @@ const char * const HVSC = "HVSC" ;                       // ---> IMPORTANT! <---
 //#include "01_HVSC.h"                                   // uncomment this line to load whole HVSC folder list from "01_HVSC.h". If disabled, it will load folder list below (disabled for BluePill, can be enabled, but must compile with O0 optimatization)
 
 #ifndef NUMBER_OF_FOLDERS
-#define NUMBER_OF_FOLDERS 2                             // set number of folder for playlist. Must have at least 1.
+#define NUMBER_OF_FOLDERS 35                             // set number of folder for playlist. Must have at least 1.
 const char * const FOLDER_PLAYLIST                       //  set favorite directories paths (relative to main HVSC folder) with sid files in it
-[NUMBER_OF_FOLDERS] =
+[NUMBER_OF_FOLDERS ] =
 {
-  "FAVORITES/",
-  "ROB/"
+  "MUSICIANS/G/Gregfeel/",
+  "MUSICIANS/B/Bayliss_Richard/",  
+  "MUSICIANS/G/Gas_On/",
+  "FAVORITES/",  // custom folder  
+  "MUSICIANS/R/Rowlands_Steve/",
+  "DEMOS/A-F/",
+  "MUSICIANS/D/DRAX/",
+  "MUSICIANS/B/Blues_Muz/Gallefoss_Glenn/",
+  "MUSICIANS/L/Lft/",
+  "MUSICIANS/L/LMan/",
+  "MUSICIANS/L/Linus/",
+  "MUSICIANS/P/Page_Jason/", // lot of multi-speed tunes (CIA speed test)
+  "MUSICIANS/D/Dunn_David/",
+  "MUSICIANS/T/Tel_Jeroen/",
+  "MUSICIANS/V/Vincenzo/",
+  "MUSICIANS/D/Daglish_Ben/",
+  "MUSICIANS/G/Gray_Matt/",
+  "MUSICIANS/B/Blues_Muz/" ,
+  "MUSICIANS/S/Sequencer/",
+  "DEMOS/G-L/",
+  "MUSICIANS/G/Gray_Matt/",
+  "MUSICIANS/F/Fanta/",
+  "MUSICIANS/T/The_Syndrom/",
+  "MUSICIANS/L/Laxity/",
+  "MUSICIANS/K/KB/",
+  "MUSICIANS/H/Hesford_Paul/",
+  "MUSICIANS/G/Goto80/",
+  "MUSICIANS/M/Mahoney/",
+  "MUSICIANS/H/Hubbard_Rob/",
+  "MUSICIANS/B/Blues_Muz/",
+  "MUSICIANS/P/PVCF/",
+  "MUSICIANS/J/JCH/",
+  "MUSICIANS/R/Rowlands_Steve/",
+  "MUSICIANS/H/Huelsbeck_Chris/",
+  "MUSICIANS/G/Galway_Martin/"
+
 };
 #endif
 
