@@ -12,6 +12,11 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////
 
+#define LED_VOICE                                        // enable LED voices on PB3 - PB4 - PB5
+#define LED_VOICE_1 PB3
+#define LED_VOICE_2 PB4
+#define LED_VOICE_3 PB5
+
 #define TUNE_PLAY_TIME 215                               // Can't implement songlenghts, manual values are needed (in seconds)//  TODO: try to determine silence in output, and skip to next tune
 
 const char * const HVSC = "HVSC" ;                       // ---> IMPORTANT! <---  name of HVSC SID Collection folder on your SD Card ("HVSC", "C64Music", "/" or "" for root, etc"
@@ -19,46 +24,12 @@ const char * const HVSC = "HVSC" ;                       // ---> IMPORTANT! <---
 //#include "01_HVSC.h"                                   // uncomment this line to load whole HVSC folder list from "01_HVSC.h". If disabled, it will load folder list below (disabled for BluePill, can be enabled, but must compile with O0 optimatization)
 
 #ifndef NUMBER_OF_FOLDERS
-#define NUMBER_OF_FOLDERS 35                             // set number of folder for playlist. Must have at least 1.
+#define NUMBER_OF_FOLDERS 2                             // set number of folder for playlist. Must have at least 1.
 const char * const FOLDER_PLAYLIST                       //  set favorite directories paths (relative to main HVSC folder) with sid files in it
-[NUMBER_OF_FOLDERS ] =
+[NUMBER_OF_FOLDERS] =
 {
-  "MUSICIANS/G/Gregfeel/",
-  "MUSICIANS/B/Bayliss_Richard/",  
-  "MUSICIANS/G/Gas_On/",
-  "FAVORITES/",  // custom folder  
-  "MUSICIANS/R/Rowlands_Steve/",
-  "DEMOS/A-F/",
-  "MUSICIANS/D/DRAX/",
-  "MUSICIANS/B/Blues_Muz/Gallefoss_Glenn/",
-  "MUSICIANS/L/Lft/",
-  "MUSICIANS/L/LMan/",
-  "MUSICIANS/L/Linus/",
-  "MUSICIANS/P/Page_Jason/", // lot of multi-speed tunes (CIA speed test)
-  "MUSICIANS/D/Dunn_David/",
-  "MUSICIANS/T/Tel_Jeroen/",
-  "MUSICIANS/V/Vincenzo/",
-  "MUSICIANS/D/Daglish_Ben/",
-  "MUSICIANS/G/Gray_Matt/",
-  "MUSICIANS/B/Blues_Muz/" ,
-  "MUSICIANS/S/Sequencer/",
-  "DEMOS/G-L/",
-  "MUSICIANS/G/Gray_Matt/",
-  "MUSICIANS/F/Fanta/",
-  "MUSICIANS/T/The_Syndrom/",
-  "MUSICIANS/L/Laxity/",
-  "MUSICIANS/K/KB/",
-  "MUSICIANS/H/Hesford_Paul/",
-  "MUSICIANS/G/Goto80/",
-  "MUSICIANS/M/Mahoney/",
-  "MUSICIANS/H/Hubbard_Rob/",
-  "MUSICIANS/B/Blues_Muz/",
-  "MUSICIANS/P/PVCF/",
-  "MUSICIANS/J/JCH/",
-  "MUSICIANS/R/Rowlands_Steve/",
-  "MUSICIANS/H/Huelsbeck_Chris/",
-  "MUSICIANS/G/Galway_Martin/"
-
+  "FAVORITES/",
+  "ROB/"
 };
 #endif
 
@@ -71,7 +42,7 @@ const char * const FOLDER_PLAYLIST                       //  set favorite direct
 
 #define AUDIO_OUT       PA8                 // can't be changed, this is just reminder 
 
-#define USE_SERIAL                          // for debugging info on Serial (usually USB Serial), uncomment if it's needed
+//#define USE_SERIAL                          // for debugging info on Serial (usually USB Serial), uncomment if it's needed
 #define USE_SERIAL1                         // for debugging info on Serial1 (usually on PA9/PA10), uncomment if it's needed
 #define SERIAL_SPEED 9600                   // Speed of serial connection
 

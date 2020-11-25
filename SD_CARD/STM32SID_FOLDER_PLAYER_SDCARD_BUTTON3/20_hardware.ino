@@ -32,10 +32,11 @@ inline void InitHardware() { // setup pins and IRQ
   pinMode(BUTTON_NEXT, INPUT_PULLUP);
 #endif
 
-
-
-
-
+#ifdef LED_VOICE
+  pinMode(LED_VOICE_1, OUTPUT);
+  pinMode(LED_VOICE_2, OUTPUT);
+  pinMode(LED_VOICE_3, OUTPUT);
+#endif
 
 #ifdef  USE_ROGER_CORE
 

@@ -108,6 +108,26 @@ inline void SID_emulator() {
   waveform_switch_2 = (noise_bit_voice_2 << 3) | (pulse_bit_voice_2 << 2) | (sawtooth_bit_voice_2 << 1) | (triangle_bit_voice_2);
   waveform_switch_3 = (noise_bit_voice_3 << 3) | (pulse_bit_voice_3 << 2) | (sawtooth_bit_voice_3 << 1) | (triangle_bit_voice_3);
 
+#ifdef LED_VOICE
+  if (pulse_bit_voice_1 << 2) {
+        digitalWrite(LED_VOICE_1, HIGH);
+  } else {
+      digitalWrite(LED_VOICE_1, LOW);
+  }
+
+  if (pulse_bit_voice_2 << 2) {
+        digitalWrite(LED_VOICE_2, HIGH);
+  } else {
+      digitalWrite(LED_VOICE_2, LOW);
+  }
+
+  if (pulse_bit_voice_3 << 2) {
+        digitalWrite(LED_VOICE_3, HIGH);
+  } else {
+      digitalWrite(LED_VOICE_3, LOW);
+  }
+#endif
+
   temp11 = (OSC_1 >> 12);
 
   switch (waveform_switch_1) {
